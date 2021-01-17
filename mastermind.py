@@ -192,12 +192,11 @@ if __name__ == '__main__':
     print(' ')
 
     valid_chars = 'roygbiv'  
-    code_str = ''  
+    code_str = ''
     guess = ''  
     guesses = []  
     clues = []  
     prompt = "Please enter your guess: "
-    reprompt = "Please enter your guess again of length four using the letters"
     tries = 1 
 
     code = create_code(valid_chars, 4)
@@ -216,7 +215,7 @@ if __name__ == '__main__':
 
         guess_str = ''  
         clue_str = ''  
-        guess_list = []  
+        guess_list = [] 
         blacks = []  
         whites = []
 
