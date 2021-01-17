@@ -172,20 +172,6 @@ def print_game(guesses, clues):
 
 if __name__ == '__main__':
 
-    valid_chars = 'roygbiv'  
-    code_str = ''  
-    guess = ''  
-    guesses = []  
-    clues = []  
-    prompt = "Please enter your guess: "
-    reprompt = "Please enter your guess again of length four using the letters"
-    tries = 1 
-
-    code = create_code(valid_chars, 4)
-
-    for item in code:
-        code_str = code_str + str(item)
-
     print(' ')
     print('***********************')
     print('Welcome to Mastermind!')
@@ -204,8 +190,23 @@ if __name__ == '__main__':
     print('its correct position. A \'w\' as a clue means that one of the characters in')
     print('your guess is present in the code but is in the incorrect position.')
     print(' ')
+
+    valid_chars = 'roygbiv'  
+    code_str = ''  
+    guess = ''  
+    guesses = []  
+    clues = []  
+    prompt = "Please enter your guess: "
+    reprompt = "Please enter your guess again of length four using the letters"
+    tries = 1 
+
+    code = create_code(valid_chars, 4)
+
     print('The computer has chosen a 4-letter code.')
     print(' ')
+
+    for item in code:
+        code_str = code_str + str(item)
 
     guess = input(prompt)
     guess = guess.lower()
