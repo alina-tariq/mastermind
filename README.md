@@ -22,3 +22,4 @@ python3 mastermind.py
 ```
 
 ## Demo
+![Demo](./demo.png)
