@@ -172,7 +172,7 @@ def print_game(guesses, clues):
 
 if __name__ == '__main__':
 
-    charc = 'roygbiv'  
+    valid_chars = 'roygbiv'  
     code_str = ''  
     guess = ''  
     guesses = []  
@@ -181,7 +181,7 @@ if __name__ == '__main__':
     reprompt = "Please enter your guess again of length four using the letters"
     tries = 1 
 
-    code = create_code(charc, 4)
+    code = create_code(valid_chars, 4)
 
     for item in code:
         code_str = code_str + str(item)
@@ -219,17 +219,15 @@ if __name__ == '__main__':
         blacks = []  
         whites = []
 
-        # creates a new guess string with space between each characters and
-        # adds each characters as an item to the guess list
-
         for char in guess:
+
+            # adds each guess character to a list for comparison
             guess_str += char + ' '
             guess_list.append(char)
 
-        # only if the guess is valid is it checked, otherwise the programs
-        # prompts the user to guess again
+        # valid guesses are checked against code
 
-        if valid(guess_list, charc, 4):
+        if valid(guess_list, valid_chars, 4):
             tries += 1  # keeps track of all the tries
 
             blacks = (find_fully_correct(code, guess_list))
@@ -255,7 +253,7 @@ if __name__ == '__main__':
                 guess = input(prompt)
                 guess = guess.lower()
                 print(" ")
-        else:
+        else: # prompts user again if guess is invalid
             guess = input(prompt)
             guess = guess.lower()
             print(" ")
