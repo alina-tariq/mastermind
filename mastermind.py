@@ -23,16 +23,16 @@ def create_code(characters, length):
     return code
 
 
-def valid(guess, valid_characters, size):
+def valid(guess, valid_chars, size):
     '''
     (list, str, int) --> boolean
 
     guess: list made of single character strs that the user creates
-    valid_characters: the characters that the guess should use
+    valid_chars: the characters that the guess should use
     size: the length the guess should be
 
     The function will return True if all the single character strs present in
-    the list are also in the valid_characters string and the list is equal
+    the list are also in the valid_chars string and the list is equal
     in length to the given size (int).
 
     >>>valid(['g', 'b', 'r', 'r'], 'gbryop', 4)
@@ -43,7 +43,7 @@ def valid(guess, valid_characters, size):
 
     if len(guess) == size:
         for item in guess:
-            if item in valid_characters:
+            if item in valid_chars:
                 count += 1
     else:
         print('The guess can only be 4 characters long.')
