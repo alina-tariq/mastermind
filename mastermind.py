@@ -187,8 +187,8 @@ if __name__ == '__main__':
     print('as well as their exact position within 10 tries.')
     print('4. You are provided with clues for each guess. A \'b\' as a clue means that')
     print('one of the characters in your guess is present in the code and is in its')
-    print('its correct position. A \'w\' as a clue means that one of the characters in')
-    print('your guess is present in the code but is in the incorrect position.')
+    print('correct position. A \'w\' as a clue means that one of the characters in your')
+    print('guess is present in the code but is in the incorrect position.')
     print(' ')
 
     valid_chars = 'roygbiv'  
