@@ -1,4 +1,8 @@
-# Mastermind
+<h1 align="center">Mastermind</h1>
+
+<p align="center">
+  <img src="https://alinacodes.vercel.app/static/media/mastermind.ce4da4a9abbd2a8292a5.png" height="200">
+</p>
 
 ## Overview 
 
